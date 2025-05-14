@@ -8,7 +8,7 @@ Runing:
 
 
  (2) After running the project, the user has a search bar where can use different words from "Cuvinte_Cheie.txt" to find differents sites or 
- the name of different university teachers to see their daily program. If searched words aren't on "Cuvinte_Cheie.txt" the user will see a popup which will warning him that no results can be found for that search.
+ the name of different university teachers to see their daily program. If searched words aren't on "Cuvinte_Cheie.txt" the user will see a popup which will warning him that no results can be found for that search because in "database.json" are different sites assigned to different words from "Cuvinte_Cheie.txt".
 
   Important: 
     The app has register sistem that will save data in "Conturi.json" file and use it with log in sistem to connect the users into their accounts.
