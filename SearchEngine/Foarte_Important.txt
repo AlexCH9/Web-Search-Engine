@@ -1,2 +1,0 @@
-	Pentru utilizarea proiectului pe un alt "PC" este necesar ca inainte de rularea programului
-sa se introduca in terminal comanda: pip install -r requirements.txt
