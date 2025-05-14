@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>StachRich</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+{% block stylesheets %}
+    <link href="{{ url_for('static', filename='user.css') }}" rel="stylesheet">
+{% endblock %}
+</head>
+
+<body style="background-color:#202020        ">
+
+    <form class="box" method = "post">
+        <div class="meniu">
+           <img src = "static/poze/inregistrare3.png" class = "inregistrare">
+        </div>
+        <div class="textbox_inregistrare">
+                    <label class="descriere" >Introdu un nume</label><br><br>
+                    <input class = "textbox3 casuta1" id="name" name="name" type="text" placeholder="Numele" required><br><br>
+                    <label class ="descriere">Introdu un Email</label><br><br>
+                    <input class="textbox3 casuta2" id="email" name="email" type="email" placeholder="email-ul" required><br><br>
+                     <label class ="descriere">Introdu o parola</label><br><br>
+                    <input class="textbox3 casuta3" id="password" name="password" type="password" placeholder="parola" required><br><br>
+            <!-- Butonul de inregistrare din meniu -->
+            <div class="buton">
+                       <a href="interfata2.html">
+                <button class="submitbutton" type="submit">Inregistrare</button>
+
+                </a>
+            </div>
+        </div>
+
+    </form>
+
+
+</body>
+</html>

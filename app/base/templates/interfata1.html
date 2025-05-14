@@ -1,0 +1,88 @@
+
+{% extends 'base.html' %}   <!-- Extinde pagina -->
+{% block stylesheets %}         <!-- Linkeaza fisierul stil interfata1 -->
+{{ super() }}   <!-- este un apel special folosit într-un bloc definit într-un fișier care extinde
+                un șablon de bază. El inserează conținutul blocului corespunzător din șablonul părinte. -->
+    <link href="{{ url_for('static', filename='stil_interfata1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='popup.css') }}" rel="stylesheet">
+    <script src = "{{ url_for('static', filename='CasutaAtentionare.js') }}" defer ></script>
+{% endblock %}
+
+{% block content %}
+<!-- Tot ce e mai sus e din jinja 2-->
+<!-- Face comunicare dintre backend si frontend -->
+
+<!-- ================================================= -->
+<!-- Butonul de Login si Register -->
+<!-- ================================================= -->
+<div id="blur-overlay"></div>
+
+    <div id="parent">
+
+     <div class = "butoane">
+      {% if logat == False %}
+          <a href="{{ url_for('login') }}"> <!-- Aici fac legatura dintre butonul de logare si interfata unde introduci datele-->
+           <button class = "bt bt1" >Logare</button>
+          </a>
+          <a href="{{ url_for('register') }}">
+           <button class = "bt bt2">Inregistrare</button>
+          </a>
+
+      {% else %}
+          <a href="{{ url_for('delogare') }}">
+           <button class = "bt bt2">Delogare</button>
+          </a>
+      {% endif %}
+     </div>
+
+<!--    <div>-->
+<!--        {% if textexistent == False %}-->
+
+<!--        {% endif %}-->
+<!--    </div>-->
+
+    <!-- ================================================= -->
+    <!-- SearchBox-ul si Titlul (Numele motorului de cautare)-->
+    <!-- ================================================= -->
+
+
+     <div class = "searchbox,box">
+    <!--     <h1 class="title1">StachRich</h1>-->
+         <div>
+             <img src = "static/poze/fundal4.png" class = "fundal">
+         </div>
+
+        <div>
+         <img src = "static/poze/logo224.png" class = "logo">
+
+        </div>
+
+
+             <form action="{{ url_for('search') }}" method="POST">
+               <div class = "searchbox, box">
+                  <input  class = "stil", id="interogare" name = "interogare" type = "text" placeholder = "Tasteaza textul" required>
+                  <a href="{{ url_for('search') }}">
+                    <button buton-submit type = "submit" class = "submitbutton" onclick="ValidareInput()">Search</button>
+                  </a>
+              </div>
+             </form>
+
+        </div>
+
+
+
+        <div class = "popup" id = "mypopup">
+            <img class = "img" src = "static/poze/atentie6.png">
+            <p class="mesaj" id = "mesajPopup">Conecteaza-ti contul pentru a avea acces la orarul profesorilor</p>
+
+            <button class = "ok_button" type="button" onclick="ascundePopup()">ok</button>
+
+        </div>
+
+
+        <script>
+            const logatt = {{'true' if logat else 'false'}};
+        </script>
+    </div>
+
+{% endblock %}  <!-- Extinde pagina -->

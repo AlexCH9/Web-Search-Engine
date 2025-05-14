@@ -1,0 +1,42 @@
+[
+    {
+        "email": "andrei@gmail.com",
+        "name": "andrei",
+        "password": "andrei"
+    },
+    {
+        "email": "alin@gmail.com",
+        "name": "Alin",
+        "password": "alin"
+    },
+    {
+        "email": "robert@gmail.com",
+        "name": "robert",
+        "password": "robert"
+    },
+    {
+        "email": "ion@gmail.com",
+        "name": "ion",
+        "password": "ion"
+    },
+    {
+        "email": "ruben@gmail.com",
+        "name": "ruben",
+        "password": "ruben"
+    },
+    {
+        "email": "ciprian@gmail.com",
+        "name": "Ciprian",
+        "password": "ciprian"
+    },
+    {
+        "email": "eusebiu@gmail.com",
+        "name": "Eusebiu",
+        "password": "eusebiu"
+    },
+    {
+        "email": "gelu@gmail.com",
+        "name": "gelu",
+        "password": "gelu"
+    }
+]

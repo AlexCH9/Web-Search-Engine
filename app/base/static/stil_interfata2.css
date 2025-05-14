@@ -1,0 +1,163 @@
+
+.fundal{
+  position: absolute;
+  width: 100%;
+  margin-left: -8px;
+  height: auto;
+  z-index: 1;
+/* Fundalul este în spate */
+
+  border-radius: 8px;
+  top: 0px;
+}
+
+
+
+.fundal2{
+  position: absolute;
+  width: 100%;
+  margin-left: -8px;
+  height: auto;
+  z-index: 1;
+/* Fundalul este în spate */
+
+  border-radius: 8px;
+  top: 810px;
+}
+
+/*=============================================================*/
+/*                  Fisier: interfata2.html*/
+/*=============================================================*/
+
+.logo{
+    margin-left: -100px;
+    margin-top: -60px;
+    width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: left; /* Centrează pe orizontală */
+    align-items: left;     /* Centrează pe verticală */
+    z-index: 2;
+    position: relative;
+
+}
+
+/*=============================================================*/
+/* Stiluri pentru butoanele: Login si Register*/
+/*=============================================================*/
+.butoane{
+    /* background: -webkit-linear-gradient(53deg, white 40%, #B2FFD1 40%); */    /* Bara de sus din interfatele 1 si 2*/
+    justify-content: right;
+    margin-left: auto;
+    display: flex;
+    z-index: 2;
+    position: relative;
+
+    user-select: none; /* previne selectarea textului de pe buton*/
+
+}
+
+.bt{
+     border:1px solid white;
+     background:  transparent;
+     padding: 5px 5px;
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+     border-radius: 10px; /* setez colturile butoanelor sa fie rotunjite */
+}
+
+
+.bt:hover{
+    color: #fff;
+    background-color: #4d4d4d; /* schimba culoarea fontului butoanelor cand cursorul este deasupra lor*/
+    cursor: pointer;
+    transform: translateY(2px); /* deplaseaza butonul 2 pixeli mai jos cand cursorul este deasupra lui */
+}
+
+
+/*=============================================================*/
+/* Stiluri pentru SearchBox si titlu */
+/*=============================================================*/
+ .title1 {
+ font-size: 3rem;
+ color: white;
+ text-align:left;
+ text-shadow: 0px 2px #B2FFD1;
+
+ }
+
+ .searchbox{
+ margin-top: 5rem;
+
+ width: 100%
+ }
+
+ .stil{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px white;
+  padding: 10px;
+  border:0px;
+  outline: none;
+  border-top: 2px #000000;
+  border-bottom: 2px #000000;
+  border-left: 2px #000000;
+  border-right: 2px #000000;
+    z-index:2;
+    position: relative;
+  width: 550px
+ }
+
+ .stil:focus{
+ box-shadow: 0px 0px 10px 0px white;
+ }
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+/*=============================================================*/
+
+/*=============================================================*/
+.submitbutton{
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px 0px white;
+
+    user-select: none;
+    z-index:2;
+    position: relative;
+}
+
+.submitbutton:hover{
+ background-color: #4d4d4d;
+
+ cursor: pointer;
+ transform: translateY(2px);
+}
+
+
+.link{
+    color: white;
+    font-size: 22px;
+    z-index:2;
+    position: relative;
+}
+
+.links{
+    font-size: 22px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #B2FFD1;
+
+
+}
+
+
+

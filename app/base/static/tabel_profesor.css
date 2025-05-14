@@ -1,0 +1,171 @@
+
+.fundal{
+  position: absolute;
+  width: 101%;
+  margin-left: -8px;
+  height: auto;
+  z-index: 1; /* Fundalul este în spate */
+  border-radius: 8px;
+  top: -20px;
+}
+
+
+/*=============================================================*/
+/*                  Fisier: interfata2.html*/
+/*=============================================================*/
+
+.logo{
+    margin-left: 355px;
+    margin-top: -80px;
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: left; /* Centrează pe orizontală */
+    align-items: left;     /* Centrează pe verticală */
+    z-index:2;
+    position: relative;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 97%;
+    /*margin: 50px auto;*/
+    margin-top: 5px;
+    margin-left: -1px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 20px #ccc;
+
+    position: relative;
+    z-index: 2;
+}
+
+.container:hover
+{
+    background-color:transparent;
+}
+
+.Linia0
+{
+    background: black;
+}
+
+.CuloareColoane
+{
+    background: #333333;
+}
+
+.rezultate
+{
+    color: white;
+    font-weight: bold;
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*=============================================================*/
+/*          Stil pentru butonul de Login si Register*/
+/*=============================================================*/
+.butoane{
+    /* background: -webkit-linear-gradient(53deg, white 40%, #B2FFD1 40%); */    /* Bara de sus din interfatele 1 si 2*/
+    justify-content: right;
+    margin-left: auto;
+    display: flex;
+    z-index:2;
+    position: relative;
+
+    user-select: none; /* previne selectarea textului de pe buton*/
+
+}
+
+.bt{
+     border:1px solid white;
+     background:  transparent;
+     padding: 5px 5px;
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+     border-radius: 10px; /* setez colturile butoanelor sa fie rotunjite */
+
+}
+
+
+.bt:hover{
+    color: #fff;
+    background-color: #4d4d4d; /* schimba culoarea fontului butoanelor cand cursorul este deasupra lor*/
+    cursor: pointer;
+    transform: translateY(2px); /* deplaseaza butonul 2 pixeli mai jos cand cursorul este deasupra lui */
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table, th, td {
+    border: 2px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: transparent;
+    color: white;
+}
+
+
+
+.submitbutton{
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid;        /* setez marginea butonului */
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+ /*box-shadow: 0px 0px 10px 0px white;*/
+
+  user-select: none;
+}
+
+.submitbutton:hover{
+ background-color: #4d4d4d;
+
+ cursor: pointer;
+ transform: translateY(2px);
+}

@@ -1,0 +1,85 @@
+ .title {
+ font-size: 5rem;
+ color: white;
+ text-align:center;
+ text-shadow: 0px 3px #B2FFD1;
+
+ }
+
+.logo{
+    margin-left: -120px;
+    margin-top: 10px;
+    width: 700px;
+
+}
+
+.inregistrare{
+    margin-left: -122px;
+    margin-top: 10px;
+    width: 700px;
+
+}
+
+.box {
+    margin: 0 auto;
+    border: 5px solid #f1f1f1;
+    padding:20px;
+    text-align: center;
+    margine: 0 auto;
+    width: 30%;
+
+}
+ .textbox1{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px white;
+  padding:10px;
+  border:0px;
+  outline: none;
+  border-top: 2px #000000;
+  border-bottom: 2px #000000;
+  border-left: 2px #000000;
+  border-right: 2px #000000;
+
+
+  width: 320px
+ }
+ .textbox3{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px white;
+  padding:10px;
+  border:0px;
+  outline: none;
+  border-top: 2px #000000;
+  border-bottom: 2px #000000;
+  border-left: 2px #000000;
+  border-right: 2px #000000;
+
+  width: 320px
+ }
+ .descriere{
+ color: white;
+ font-size: 30px;
+ font-weight: bold;
+ text-align: center;
+
+ }
+ .submitbutton{
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid;        /* setez marginea butonului */
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px 0px white;
+
+  user-select: none;
+}
+
+.submitbutton:hover{
+ background-color: #4d4d4d;
+
+ cursor: pointer;
+ transform: translateY(2px);
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>StachRich</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{% block stylesheets %}
+    <link href="{{ url_for('static', filename='user.css') }}" rel="stylesheet">
+{% endblock %}
+<hr class="linia1">
+<body style="background-color:#202020">
+<!-- Text box-urile: Email si password  -->
+
+
+<form class="box" method="post">
+    <div class="meniu">
+        <img src = "static/poze/logare5.png" class = "logo">
+    </div>
+    </div>
+    <div class="textbox">
+        <label class="descriere"><b>Introdu un email</b></label>
+        <br><br>
+        <input class="textbox1 ordine1" id="email" name="email" type="email" placeholder = "Email-ul" required>
+        <br><br>
+
+        <label class="descriere"><b>Introdu parola</b></label><br><br>
+        <input class="textbox1 ordine2" id="password" name="password" type="password" placeholder="Parola" required>
+    </div>
+    <br>
+    <!-- Butonul de logare din meniu -->
+    <div>
+        <a href="interfata1.html">
+             <button class="submitbutton" type="submit">Logare</button>
+        </a>
+    </div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% block stylesheets %}         <!-- linkul din interfata 1 si 2 se introduc aici folosindune de jinja 2 -->
+    {% endblock %}          <!-- Aici se stie ca s-a terminat block-ul pentru css -->
+</head>
+<body style = "background-color: #202020;">
+{% block content %}
+{% endblock %}
+</body>
+</html>

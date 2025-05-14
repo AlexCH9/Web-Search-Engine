@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motor de cautare</title>
+    <link href="{{ url_for('static', filename='tabel_profesor.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='popup.css') }}" rel="stylesheet">
+    <script src = "{{ url_for('static', filename='CasutaAtentionare.js') }}" defer ></script>
+</head>
+
+<div class="butoane">
+  {% if logat == False %}
+      <a href="{{ url_for('login') }}"> <!-- Aici fac legatura dintre butonul de logare si interfata unde introduci datele-->
+       <button class = "bt bt1" >Logare</button>
+      </a>
+      <a href="{{ url_for('register') }}">
+       <button class = "bt bt2">Inregistrare</button>
+      </a>
+  {% else %}
+      <a href="{{ url_for('delogare') }}">
+       <button class = "bt bt2">Delogare</button>
+      </a>
+  {% endif %}
+    <a href="{{ url_for('interfata1') }}">
+        <button class = "bt bt2">HomePage</button>
+    </a>
+</div>
+
+<div class = "searchbox,box">
+ <img src = "static/poze/logo224.png" class = "logo">
+ <img src = "static/poze/fundalinterfata2_2.png" class = "fundal">
+</div>
+
+<body style="background-color:#202020">
+
+    <div class = "container">
+<!--        <form method = "POST">-->
+<!--            <input type = "text" name = "nume_profesor" placeholder= "introdu numele profesorului" required>-->
+<!--            <button type = "submit">Cautare</button>-->
+<!--        </form>-->
+
+        <!-- SearchBox-ul -->
+         <form action="{{ url_for('search') }}" method="POST">
+          <div class = "searchbox, box">
+           <input  class = "stil" id="interogare" name = "interogare" type = "text" placeholder = "Enter your text" required>
+                 <a href="{{ url_for('search') }}">
+                  <button class = "submitbutton" type = "submit" onclick="ValidareInput()">Search</button>
+                 </a>
+          </div>
+         </form>
+
+        <div class = "rezultate">
+            {% if rezultate %}
+                <h2>Rezultate:</h2>
+                <table>
+                    <tr class = "Linia0">
+                        <th>Nume</th>
+                        <th>Email</th>
+                        <th>Materie</th>
+                        <th>Laborator</th>
+                        <th>Cladirea</th>
+                        <th>Ora Inceput</th>
+                        <th>Ora Sfarsit</th>
+                        <th>Ziua</th>
+                    </tr>
+                    {% for row in rezultate %}
+                        <tr>
+                            <th>{{row[0]}}</th>
+                            <th class = "CuloareColoane">{{row[1]}}</th>
+                            <th>{{row[2]}}</th>
+                            <th class = "CuloareColoane">{{row[3]}}</th>
+                            <th>{{row[4]}}</th>
+                            <th class = "CuloareColoane">{{row[5]}}</th>
+                            <th>{{row[6]}}</th>
+                            <th class = "CuloareColoane">{{row[7]}}</th>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p> Nu s-a gasit acest profesor </p>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+
+
+    <div class = "popup" id = "mypopup">
+        <img class = "img" src = "static/poze/atentie6.png">
+        <p class="mesaj" id = "mesajPopup">Conecteaza-ti contul pentru a avea acces la orarul profesorilor</p>
+
+        <button class = "ok_button" type="button" onclick="ascundePopup()">ok</button>
+
+    </div>
+
+
+</html>
+
